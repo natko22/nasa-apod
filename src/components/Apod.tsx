@@ -11,6 +11,18 @@ interface ApodData {
   date: string;
 }
 
+// Function to format date
+const formatDate = (dateString: string): string => {
+  const date = new Date(dateString);
+  const options: Intl.DateTimeFormatOptions = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+  return date.toLocaleDateString("en-GB", options);
+};
+
 // fetch image for a specific date
 const Apod: React.FC<{ date?: string }> = ({ date }) => {
   const [data, setData] = useState<ApodData | null>(null);
@@ -34,12 +46,15 @@ const Apod: React.FC<{ date?: string }> = ({ date }) => {
   }, [date]);
 
   if (error) return <div>{error}</div>;
-  if (!data) return <div>Loading...</div>;
+  if (!data) return <div className="loading">Loading...</div>;
+
+  // Format the date with day first
+  const formattedDate = formatDate(data.date);
 
   return (
     <div>
       <h3>{data.title}</h3>
-      <p className="ApodDate"> {data.date} </p>
+      <p className="ApodDate"> {formattedDate} </p>
       <img src={data.url} alt={data.title} className="ApodImage" />
       <p className="ApodExplanation">{data.explanation}</p>
     </div>
