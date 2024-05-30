@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is a React application that fetches and displays NASA's Astronomy Picture of the Day (APOD). Users can search for APOD images by date using a date picker. The app also includes a home page with a welcome message and a button that navigates to the APOD display page.
+This project is a React application that fetches and displays NASA's Astronomy Picture of the Day (APOD). Users can search for APOD images by date using a date picker.
 
 ## Features
 
