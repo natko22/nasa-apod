@@ -34,7 +34,7 @@ h3 {
   padding: 10px;
   margin: 0 auto;
   border-radius: 20px;
-  box-shadow: 0 8px 8px 10px rgba(7, 7, 7, 0.1);
+  box-shadow: 0 2px 5px 8px rgba(7, 7, 7, 0.1);
 }
 
 .ApodExplanation {
@@ -47,7 +47,7 @@ h3 {
   padding: 20px;
   text-align: center;
   border-radius: 20px;
-  box-shadow: 0 8px 8px 10px rgba(7, 7, 7, 0.1);
+  box-shadow: 0 2px 5px 8px rgba(7, 7, 7, 0.1);
   width: 80%;
   margin: 20px auto;
 }
@@ -91,4 +91,37 @@ h3 {
   font-family: Fragile Bombers;
   font-size: 30px;
   padding: 10px;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .ApodImage {
+    max-width: 80%;
+  }
+
+  .ApodExplanation {
+    width: 70%;
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  .ApodDate {
+    font-size: 14px;
+  }
+
+  .date-label {
+    font-size: 20px;
+  }
+
+  .submit-btn {
+    font-size: 18px;
+  }
+
+  .search-input {
+    font-size: 16px;
+  }
 }
