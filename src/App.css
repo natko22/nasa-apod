@@ -29,10 +29,10 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
   padding: 10px;
-  margin: 10px auto;
+  margin: 0 auto;
   border-radius: 20px;
   box-shadow: 0 8px 8px 10px rgba(7, 7, 7, 0.1);
 }
@@ -44,8 +44,12 @@ h3 {
   font-size: 20px;
   font-weight: 700;
   line-height: 1.3;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 8px 8px 10px rgba(7, 7, 7, 0.1);
+  width: 80%;
+  margin: 20px auto;
 }
 
 .ApodDate {
