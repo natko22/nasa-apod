@@ -1,3 +1,5 @@
+<p align="center"><img src="./public/night-sky-milky-way.jpg" width="250px" /></p>
+
 # NASA Astronomy Picture of the Day (APOD)
 
 ## Description
