@@ -38,10 +38,10 @@ const Apod: React.FC<{ date?: string }> = ({ date }) => {
 
   return (
     <div>
-      <h2>{data.title}</h2>
-      <img src={data.url} alt={data.title} />
-      <p>{data.explanation}</p>
-      <p>{data.date}</p>
+      <h3>{data.title}</h3>
+      <p className="ApodDate"> {data.date} </p>
+      <img src={data.url} alt={data.title} className="ApodImage" />
+      <p className="ApodExplanation">{data.explanation}</p>
     </div>
   );
 };
