@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import config from "../config";
+import config from "../config/config";
 
 const BASE_URL = "https://api.nasa.gov/planetary/apod";
 
@@ -38,7 +38,7 @@ const Apod: React.FC<{ date?: string }> = ({ date }) => {
 
   return (
     <div>
-      <h1>{data.title}</h1>
+      <h2>{data.title}</h2>
       <img src={data.url} alt={data.title} />
       <p>{data.explanation}</p>
       <p>{data.date}</p>
