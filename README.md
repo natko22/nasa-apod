@@ -1,4 +1,4 @@
-<p align="center"><img src="./public/night-sky-milky-way.jpg" width="250px" /></p>
+<p align="center"><img src="./public/astronomy-space-4k-eg-1920x1080-1.jpg" width="250px" /></p>
 
 # NASA Astronomy Picture of the Day (APOD)
 
