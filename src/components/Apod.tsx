@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import config from "../config/config";
-
 const BASE_URL = "https://api.nasa.gov/planetary/apod";
 
 interface ApodData {
@@ -9,6 +8,7 @@ interface ApodData {
   title: string;
   explanation: string;
   date: string;
+  media_type: string; // Add media_type field
 }
 
 // Function to format date
@@ -56,8 +56,18 @@ const Apod: React.FC<{ date?: string }> = ({ date }) => {
   return (
     <div>
       <h3>{data.title}</h3>
-      <p className="ApodDate"> {formattedDate} </p>
-      <img src={data.url} alt={data.title} className="ApodImage" />
+      <p className="ApodDate">{formattedDate}</p>
+      {data.media_type === "image" ? (
+        <img src={data.url} alt={data.title} className="ApodImage" />
+      ) : (
+        <iframe
+          title={data.title}
+          src={data.url}
+          className="ApodVideo"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      )}
       <p className="ApodExplanation">{data.explanation}</p>
     </div>
   );
