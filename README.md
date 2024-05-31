@@ -34,3 +34,7 @@ This project is a React application that fetches and displays NASA's Astronomy P
    git clone https://github.com/your-username/nasa-apod.git
    cd nasa-apod
    ```
+
+   ## Deployed Site
+
+You can access the deployed site [here](https://nasasspaceimages.netlify.app/).
