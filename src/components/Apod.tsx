@@ -8,7 +8,7 @@ interface ApodData {
   title: string;
   explanation: string;
   date: string;
-  media_type: string; // Add media_type field
+  media_type: string;
 }
 
 // Function to format date
