@@ -39,13 +39,15 @@ const Apod: React.FC<{ date?: string }> = ({ date }) => {
         });
         setData(response.data);
       } catch (error) {
-        setError("Failed to fetch data from NASA APOD API");
+        setError(
+          "Oops! Something went wrong while fetching the data. Please try again later."
+        );
       }
     };
     fetchData();
   }, [date]);
 
-  if (error) return <div>{error}</div>;
+  if (error) return <div className="error-message">{error}</div>;
   if (!data) return <div className="loading">Loading...</div>;
 
   // Format the date with day first

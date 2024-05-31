@@ -93,6 +93,18 @@ h3 {
   padding: 10px;
 }
 
+.error-message {
+  color: red;
+  font-family: Fragile Bombers;
+  font-size: 1.5rem;
+  margin: 1rem;
+  padding: 1rem;
+  border: 2px solid red;
+  border-radius: 5px;
+  background-color: #ffe6e6;
+  text-align: center;
+}
+
 /* Media queries for responsiveness */
 @media only screen and (max-width: 768px) {
   h1 {
